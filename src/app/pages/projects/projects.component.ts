@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {FELprojects, WorkProjects} from './projects';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -8,10 +9,13 @@ import {FELprojects, WorkProjects} from './projects';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+  ) { }
   FELprojects = FELprojects;
   WorkProjects = WorkProjects;
   ngOnInit(): void {
+    this.titleService.setTitle('Projects | Diego Sánchez');
   }
 
 }

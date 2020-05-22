@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-academics',
   templateUrl: './academics.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcademicsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+  ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Academics | Diego Sánchez');
   }
 
 }

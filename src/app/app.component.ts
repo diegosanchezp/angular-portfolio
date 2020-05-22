@@ -6,6 +6,7 @@ import { faLinkedin, faGithubSquare} from '@fortawesome/free-brands-svg-icons';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons'
 import {MatDialog} from '@angular/material/dialog';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -15,7 +16,8 @@ export class AppComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    public dialog: MatDialog){
+    public dialog: MatDialog,
+    ){
   }
   faEnvelope = faEnvelope
   // TODO: add router link -->
@@ -23,12 +25,15 @@ export class AppComponent {
     {icon: faGithubSquare, title: 'Github Account', href: 'https://github.com/diegosanchezp/'},
     {icon: faLinkedin, title: 'LinkedIn Profile', href: 'https://www.linkedin.com/in/diego-s%C3%A1nchez-b0753b137/'}
   ]
+
   iconSize = '3x'
   drawerMode = 'side';
   subsObs: Subscription;
+
   openDialog() {
     const dialogRef = this.dialog.open(DialogContent);
   }
+
   ngOnInit(){
     this.subsObs = this.breakpointObserver.observe([
       Breakpoints.Tablet, Breakpoints.Medium, Breakpoints.XSmall
@@ -36,6 +41,7 @@ export class AppComponent {
       this.drawerMode = media.matches ? "over": "side"
     });
   }
+
   ngOnDestroy(){
     this.subsObs.unsubscribe();
   }
