@@ -1,0 +1,45 @@
+<style>
+  hr{
+    width: 100%;
+    background-color: black;
+  }
+  a{
+    text-decoration: none;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px 10px;
+    margin: 0 auto;
+    padding: 10px 0px;
+  }
+  @media(max-width: 500px){
+    .container{
+      grid-template-columns: 1fr;
+    }
+  }
+
+</style>
+
+<h1>Work projects</h1>
+<hr/>
+<p>Projects that I've been employed </p>
+<div class="container">
+    <project-card *ngFor="let project of WorkProjects" [project]="project"></project-card>
+</div>
+
+<h1>Miniprojects</h1>
+<hr/>
+
+<p>Projects done to get freecodecamp certifications</p>
+<div class="container">
+  <project-card *ngFor="let project of FELprojects" [project]="project"></project-card>
+</div>
+
+<h1>Others</h1>
+<hr/>
+<p>
+  See my 
+  <a href="https://codepen.io/diegosanchezp_/" target="_blank">codepen</a> 
+  profile
+</p>
