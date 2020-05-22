@@ -33,23 +33,26 @@
       right: 1.5rem;
     }
   }
+  main{
+    padding: 10px;
+  }
 </style>
 
 <!-- Sidenav -->
 
 <mat-drawer-container class="drawer-container">
-  <mat-drawer #drawer [mode]="drawerMode" opened="true" class="sidenav" mode="side">
+  <mat-drawer position="start" #drawer [mode]="drawerMode" opened="true" class="sidenav" mode="side">
     <img src="../assets/Images/ProfilePic.jpg" alt="profile-pic">
     <p>Diego Sánchez</p>
     <p>Full Stack Web Developer</p>
     <mat-list>
-      <mat-list-item matRipple class="sidenav-item">About</mat-list-item>
+      <mat-list-item routerLink="/about" matRipple class="sidenav-item">About</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item matRipple class="sidenav-item">Academics</mat-list-item>
+      <mat-list-item routerLink="/academics" matRipple class="sidenav-item">Academics</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item matRipple class="sidenav-item">Certifications</mat-list-item>
+      <mat-list-item routerLink="/certifications" matRipple class="sidenav-item">Certifications</mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item matRipple class="sidenav-item">Projects</mat-list-item>
+      <mat-list-item routerLink="/projects" matRipple class="sidenav-item">Projects</mat-list-item>
       <div class="sidenav-icons">
         <fa-icon [icon]="faEnvelope" 
         (click)="openDialog()" [size]="iconSize"></fa-icon>
@@ -59,8 +62,7 @@
       </div>
     </mat-list>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
+  <mat-drawer-content>
     <button mat-fab 
     class="app-fab--absolute"
     title="toggle sidenav" 
@@ -68,8 +70,10 @@
     (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
     </button>
-    <router-outlet></router-outlet>
-  </div>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-drawer-content>
 </mat-drawer-container>
 
 

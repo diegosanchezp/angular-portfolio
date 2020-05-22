@@ -13,13 +13,21 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list'; 
 import {MatRippleModule} from '@angular/material/core'; 
 import {MatDialogModule} from '@angular/material/dialog';
-import { AboutComponent } from './pages/about/about.component'; 
+import { AboutComponent } from './pages/about/about.component';
+import { AcademicsComponent } from './pages/academics/academics.component';
+import { ProjectsComponent } from './pages/projects/projects.component';
+import { CertificationsComponent } from './pages/certifications/certifications.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     DialogContent,
-    AboutComponent
+    AboutComponent,
+    AcademicsComponent,
+    ProjectsComponent,
+    CertificationsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
