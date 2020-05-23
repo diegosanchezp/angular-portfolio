@@ -1,7 +1,19 @@
+// ====== Type declarations ====== 
+export interface project {
+    title: string;
+    url: string;
+    img: string;
+    description: string;
+    tags: string[];
+    [key: string]: any
+}
+
+export type Projects =  project[];
+
 // ====== Free Code Camp Projects ====== 
 
 // FCC: Front End Libraries projects
-export const FELprojects = [
+export const FELprojects: Projects = [
   {
     title: 'Drum Machine',
     url: 'https://diegosanchezp.github.io/drum-machine-fcc/',
@@ -40,7 +52,7 @@ export const FELprojects = [
 ];
 
 // FCC: Responsive Web Design projects
-export const RWDprojects = [
+export const RWDprojects: Projects = [
   {
     title: '',
     url: '',
@@ -51,7 +63,7 @@ export const RWDprojects = [
 ]
 
 // ====== Real Life Projects ====== 
-export const WorkProjects = [
+export const WorkProjects: Projects = [
   {
     title: 'Copin Pay',
     url: 'http://copinpay.com/',

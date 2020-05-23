@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {FELprojects, WorkProjects} from './projects';
+import {FELprojects, WorkProjects, project} from './projects';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -55,7 +55,7 @@ export class ProjectsComponent implements OnInit {
   `
 })
 export class ProjectCard{
-  @Input() project = {
+  @Input() project: project = {
     title: '',
     url: '',
     img: '',
