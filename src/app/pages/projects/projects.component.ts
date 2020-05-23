@@ -27,7 +27,10 @@ export class ProjectsComponent implements OnInit {
     a img{
       margint-top: 0 !important;
     }
-    
+    .project-card{
+      background-color: #121212;
+      box-shadow: 0px 0px 1px;
+    }
   </style>
   <mat-card class="project-card">
     <mat-card-header>

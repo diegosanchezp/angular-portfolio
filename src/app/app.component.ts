@@ -56,7 +56,7 @@ export class AppComponent {
     </div>
 
     <div mat-dialog-actions align="end">
-      <button mat-button mat-dialog-close>Ok</button>
+      <button color="accent" mat-raised-button mat-dialog-close>Ok</button>
     </div>
   `
 })

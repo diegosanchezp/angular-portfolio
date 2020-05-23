@@ -2,12 +2,14 @@
 <style>
   .drawer-container{
     height: 100vh;
+    background-color: black;
   }
 
   .sidenav{
     display: flex;
     flex-direction: column;
     padding: 10px;
+    background-color: #121212;
   }
   .sidenav img{
     max-width: 100%;
@@ -20,6 +22,10 @@
     max-width: 100%;
     display: flex;
     justify-content: space-evenly;
+    color: white;
+  }
+  .sidenav-icons a {
+    color: white;
   }
   .app-fab--absolute {
     position: fixed;
@@ -27,7 +33,16 @@
     right: 1rem;
     z-index: 1;
   }
-
+  mat-drawer p{
+    margin-top: 5px;
+    text-align: center;
+    
+  }
+  #name{
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFCC00;
+  }
   @media(min-width: 1024px) {
     .app-fab--absolute {
       bottom: 1.5rem;
@@ -44,7 +59,7 @@
 <mat-drawer-container class="drawer-container">
   <mat-drawer position="start" #drawer [mode]="drawerMode" opened="true" class="sidenav" mode="side">
     <img src="../assets/Images/ProfilePic.jpg" alt="profile-pic">
-    <p>Diego Sánchez</p>
+    <p id="name">Diego Sánchez</p>
     <p>Full Stack Web Developer</p>
     <mat-list>
       <mat-list-item 
@@ -64,6 +79,7 @@
         class="sidenav-item">Projects</mat-list-item>
       <div class="sidenav-icons">
         <fa-icon [icon]="faEnvelope" 
+        style="cursor: pointer;"
         (click)="openDialog()" [size]="iconSize"></fa-icon>
         <a  [href]="icon.href" *ngFor="let icon of icons" [title]="icon.title" target="_blank">
           <fa-icon  [icon]="icon.icon" [size]="iconSize"></fa-icon>
@@ -72,7 +88,7 @@
     </mat-list>
   </mat-drawer>
   <mat-drawer-content>
-    <button mat-fab 
+    <button mat-fab matRipple
     class="app-fab--absolute"
     title="toggle sidenav" 
     type="button" mat-button 

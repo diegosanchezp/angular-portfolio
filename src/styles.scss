@@ -1,25 +1,32 @@
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Roboto, monospace',
+  $body-1: mat-typography-level(15px, 24px, 500)
+);
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat-core($custom-typography);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$angular-portfolio-primary: mat-palette($mat-indigo);
-$angular-portfolio-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-portfolio-primary: mat-palette($mat-amber);
+$angular-portfolio-accent: mat-palette($mat-amber, A200, A100, A400);
+
 
 // The warn palette is optional (defaults to red).
 $angular-portfolio-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$angular-portfolio-theme: mat-light-theme($angular-portfolio-primary, $angular-portfolio-accent, $angular-portfolio-warn);
+$angular-portfolio-theme: mat-dark-theme($angular-portfolio-primary, $angular-portfolio-accent, $angular-portfolio-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -43,4 +50,6 @@ $angular-portfolio-theme: mat-light-theme($angular-portfolio-primary, $angular-p
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
