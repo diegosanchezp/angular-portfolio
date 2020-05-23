@@ -56,7 +56,7 @@ export const WorkProjects = [
     title: 'Copin Pay',
     url: 'http://copinpay.com/',
     img: 'copin-webpage-screenshot.png',
-    description: 'A platform for managing your monetary assets from Copyn\s \
+    description: 'A platform for managing your monetary assets from Copin\'s \
     story platform',
     tags: ['Angular8', 'Ionic', 'Firebase'],
   },

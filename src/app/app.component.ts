@@ -20,7 +20,6 @@ export class AppComponent {
     ){
   }
   faEnvelope = faEnvelope
-  // TODO: add router link -->
   icons = [
     {icon: faGithubSquare, title: 'Github Account', href: 'https://github.com/diegosanchezp/'},
     {icon: faLinkedin, title: 'LinkedIn Profile', href: 'https://www.linkedin.com/in/diego-s%C3%A1nchez-b0753b137/'}
@@ -50,6 +49,12 @@ export class AppComponent {
 @Component({
   selector: 'dialog-content',
   template: `
+    <style>
+      div p{
+        text-align: center;
+      }
+    </style>
+
     <div mat-dialog-content>
       <p>Send me an email at</p>
       <p><b>diegosandmg@gmail.com</b></p>
