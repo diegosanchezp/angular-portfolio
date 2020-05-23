@@ -6,7 +6,7 @@ import {Title} from '@angular/platform-browser';
 import {MatChipsModule} from '@angular/material/chips'; 
 import {MatCardModule} from '@angular/material/card'; 
 import {MatRippleModule} from '@angular/material/core'; 
-
+import {ProjectsPageRoutingModule} from './projects-routing.module'
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import {MatRippleModule} from '@angular/material/core';
     MatCardModule,
     MatChipsModule,
     MatRippleModule,
+    ProjectsPageRoutingModule,
   ],
   exports: [
     ProjectsComponent

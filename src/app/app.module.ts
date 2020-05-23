@@ -15,7 +15,6 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AboutComponent } from './pages/about/about.component';
 import { AcademicsComponent } from './pages/academics/academics.component';
-import { ProjectsModule } from './pages/projects/projects.module';
 import { CertificationsComponent } from './pages/certifications/certifications.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component'; 
 
@@ -40,7 +39,6 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     MatRippleModule,
     FontAwesomeModule,
     MatDialogModule,
-    ProjectsModule,
   ],
   providers: [
     Title,
