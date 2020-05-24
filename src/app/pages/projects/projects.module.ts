@@ -8,6 +8,8 @@ import {MatCardModule} from '@angular/material/card';
 import {MatRippleModule} from '@angular/material/core'; 
 import {ProjectsPageRoutingModule} from './projects-routing.module'
 
+
+import { AngularFireAnalyticsModule, ScreenTrackingService } from '@angular/fire/analytics';
 @NgModule({
   declarations: [
     ProjectsComponent,
@@ -19,12 +21,14 @@ import {ProjectsPageRoutingModule} from './projects-routing.module'
     MatChipsModule,
     MatRippleModule,
     ProjectsPageRoutingModule,
+    AngularFireAnalyticsModule,
   ],
   exports: [
     ProjectsComponent
   ],
   providers: [
-    Title
+    Title,
+    ScreenTrackingService
   ]
 })
 export class ProjectsModule { }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "portfolio-4a2b6": {
+      "hosting": {
+        "angular-portfolio": [
+          "portfolio-4a2b6"
+        ]
+      }
+    }
+  }
+}
