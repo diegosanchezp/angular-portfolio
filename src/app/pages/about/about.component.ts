@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Title, Meta } from '@angular/platform-browser';
 import {MatDialog} from '@angular/material/dialog';
 import {DialogContent} from '../../app.component';
 @Component({
@@ -11,11 +11,15 @@ export class AboutComponent implements OnInit {
 
   constructor(
     private titleService: Title,
+    private metaService: Meta,
     public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('About | Diego Sánchez');
+    this.metaService.updateTag(
+      {name: 'description', content: 'About Diego Sánchez'}
+    );
   }
 
   openDialog() {
