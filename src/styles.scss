@@ -49,6 +49,21 @@ $angular-portfolio-theme: mat-dark-theme($angular-portfolio-primary, $angular-po
   height: 100vh;
 }
 
+@media(max-width: 800px) and (orientation: landscape) {
+  .center-absolute{
+    height: auto;
+  }
+
+  .center-block{
+    min-width: 100vw;
+  }
+}
+@media(max-width: 600px) and (orientation: portrait){
+
+  .center-block{
+    min-width: 100vw;
+  }
+}
 html, body { height: 100%; }
 body { 
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 

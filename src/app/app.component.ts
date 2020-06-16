@@ -35,7 +35,9 @@ export class AppComponent {
 
   ngOnInit(){
     this.subsObs = this.breakpointObserver.observe([
-      Breakpoints.Tablet, Breakpoints.Medium, Breakpoints.XSmall
+      Breakpoints.Tablet, Breakpoints.Medium, Breakpoints.XSmall,
+      Breakpoints.HandsetPortrait, Breakpoints.TabletPortrait,
+      Breakpoints.HandsetLandscape
     ]).subscribe((media)=>{
       this.drawerMode = media.matches ? "over": "side"
     });
