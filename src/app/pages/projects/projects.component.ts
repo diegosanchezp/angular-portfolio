@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {FELprojects, WorkProjects, project} from './projects';
 import { Title, Meta } from '@angular/platform-browser';
-
+import {IndexedDBService} from '../../services/indexed-db.service';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -12,10 +12,11 @@ export class ProjectsComponent implements OnInit {
   constructor(
     private titleService: Title,
     private metaService: Meta,
+    private indexedDB: IndexedDBService,
   ) { }
   FELprojects = FELprojects;
   WorkProjects = WorkProjects;
-  ngOnInit(): void {
+  async ngOnInit() {
     this.titleService.setTitle('Projects | Diego Sánchez');
     this.metaService.updateTag(
       {
@@ -23,6 +24,8 @@ export class ProjectsComponent implements OnInit {
         content: 'Web development projects done by Diego Sánchez'
       }
     );
+    const projects = await this.indexedDB.getProjects();
+    console.log(projects);
   }
 
 }
